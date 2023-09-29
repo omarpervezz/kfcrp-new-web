@@ -12,7 +12,9 @@ body {
 	background: #FFF;
 	font-family: 'Roboto', sans-serif;
 }
-
+ul li{
+	list-style-type: none;
+}
 body a {
 	transition: 0.5s all;
 	-webkit-transition: 0.5s all;
@@ -331,7 +333,7 @@ a:focus, a:hover {
 	cursor: pointer;
 	transition: transform 0.3s ease-in-out 0s;
 	position: absolute;
-	right: 15px;
+	right: 25px;
 	top: 23px;
 	opacity: 0;
 	visibility: hidden;
@@ -373,40 +375,6 @@ a:focus, a:hover {
 
 /* -- // Humburger Menu --*/
 /* -- // Pushbar CSS Custom code -- */
-
-
-.push__bar .mobile__navigation__ {
-	width: calc(100% - 20px);
-	margin: auto;
-	padding: 0px 1rem;
-}
-
-.push__bar .mobile__navigation__ ul {
-	width: 30%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-.push__bar .mobile__navigation__ ul li {
-	padding: 0.8rem 0px;
-}
-
-.push__bar .mobile__navigation__ ul li a {
-	color: var(--custom-purple-color);
-	opacity: 0.7;
-	transition: color 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s,
-		opacity 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
-	font-family: var(--manrope-font);
-	font-weight: 500;
-	font-style: var(--font-style);
-}
-
-.push__bar .mobile__navigation__ ul li:hover a {
-	color: var(--white-color);
-	opacity: 1;
-}
 
 html.pushbar_locked {
 	overflow: hidden;
@@ -484,89 +452,71 @@ html.pushbar_locked .pushbar_overlay {
 }
 
 [data-pushbar-id] {
-	background-color: rgba(11, 3, 38, 0.95);
+	background-color: #0d141b !important;
 	z-index: 1002;
-	width: 70% !important;
+	/* width: 27% !important; */
 }
 
-.push-container {
-	color: white;
-}
 
-.push-container .mobile_container {
-	width: 100%;
-	height: 100%;
+.mobile_menu_header{
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
-	position: relative;
+	border-bottom: 1px solid #fff;
+	padding: 35px 40px 25px;
+	border-bottom: 1px solid #18202a;
 }
-
-.push-container .mobile_container .overlay__ {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.24);
-	z-index: -1;
+.mobile_menu_header img{
+	width: 95px;
 }
-
-.push-container .mobile_container .menu___ {
-	width: 100%;
-	height: 41vh;
-	position: relative;
-	background: linear-gradient(99deg,
-			rgba(4, 4, 4, 0.65) 0%,
-			rgba(0, 0, 0, 0.68) 100%);
-}
-
-.push-container .mobile_container .menu___ .mobile_menu_logo {
-	position: absolute;
-	width: 9rem;
-	left: 45%;
-	transform: translate(0px, 35px);
-}
-
-.push-container .container-fluid {
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.push-container .container-fluid .mobile__navigation__ ul .hover_item a svg {
-	fill: var(--custom-purple-color);
-	opacity: 1;
-	transition: fill 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
-}
-
-.push-container .container-fluid .mobile__navigation__ ul .hover_item a:hover svg {
-	fill: var(--white-color);
-}
-
-#close {
-	background: transparent;
+.mobile_menu_header .close_menu{
 	border: none;
 	outline: none;
-	position: absolute;
-	top: 1.4rem;
-	left: 1.9rem;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: #1f2935;
+    cursor: pointer;
+    transition: all .3s ease-out 0s;
 }
-
-#close i {
-	font-size: 2.2rem;
-	color: rgba(255, 255, 255, 0.66);
+.mobile_menu_header .close_menu:hover {
+    background-color: rgb(255, 255, 255);
+	background-image: linear-gradient(200deg,
+			rgb(158, 97, 255),
+			rgba(142, 97, 255, 0) 34%),
+		radial-gradient(circle at 0% -100%,
+			rgb(97, 155, 255) 20%,
+			rgba(205, 219, 248, 0) 51%),
+		linear-gradient(rgb(108, 82, 238), rgb(108, 82, 238));
+    color: #FFF;
 }
-
-#close .close_text {
-	font-size: 1.1rem;
+.mobile_menu_header .close_menu i{
+	font-size: 22px;
+	color: #adb0bc;
 }
-
+.menu__link{
+	padding: 21px 0 21px;
+}
+.menu__link li{
+	border-top: 1px solid #22292f;
+}
+.menu__link li:first-child{
+	border-top: none;
+}
+.menu__link li a{
+    display: block;
+    line-height: 1.5;
+    padding: 11px 56px 14px 48px;
+    font-weight: 600;
+    color: #FFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    transition: all .5s ease;
+    border: none;
+}
 .pushbar_overlay {
-	background-color: rgb(16, 17, 18);
+	background-color: rgb(16, 17, 18)!important;
 }
 
 
@@ -2322,6 +2272,9 @@ ul.social-icons li a.youtube:hover {
 	}
 	div#navbar {
 		padding: 0;
+	}
+	.rslides img {
+		height: 522px;
 	}
 	.agilehover-effect ul {
 		background-color: #000;
