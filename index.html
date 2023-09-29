@@ -20,6 +20,7 @@
 <!-- Owl-Carousel-CSS --> <link rel="stylesheet" href="./css/owl.carousel.css"   type="text/css" media="all">
 <!-- Chocolat-CSS -->	  <link rel="stylesheet" href="./css/chocolat.css"	   type="text/css" media="all">
 <!-- Animate-CSS -->	  <link rel="stylesheet" href="./css/animate-custom.css" type="text/css" media="all">
+<!-- Animate Min-CSS -->  <link rel="stylesheet" href="./css/animate.min.css" type="text/css" media="all">
 <!-- Pushbar CSS -->	  <link rel="stylesheet" href=./css/pushbar.css" type="text/css" media="all">
 <!-- //Custom-Stylesheet-Links -->
 
@@ -50,7 +51,7 @@
 	<div class="agileheader" id="agileitshome">
 
 		<!-- Navigation -->
-		<div class="w3lsnavigation">
+		<div class="w3lsnavigation animate__animated">
 			<nav class="navbar navbar-inverse agilehover-effect wthreeeffect navbar-default">
 
 				<div class="navbar-header">
@@ -71,8 +72,8 @@
 
 				<div id="navbar" class="navbar-collapse navbar-right collapse">
 					<ul class="nav navbar-nav navbar-right cross-effect" id="cross-effect">
-						<li><a class="scroll" href="#w3lsaboutaits">HOME</a></li>
-						<li><a class="scroll" href="#agileinfoplatforms">ABOUT</a></li>
+						<li><a class="scroll" href="index.html">HOME</a></li>
+						<li><a href="about.html">ABOUT</a></li>
 						<li><a class="scroll" href="#wthreetabsaits">BLOGS</a></li>
 						<li><a class="scroll" href="#wthreeblogsaits">BLOG</a></li>
 						<li><a class="scroll" href="#w3portfolioaits">GUIDES</a></li>
@@ -110,8 +111,8 @@
 		 </div>
 		 <div class="menu__link">
 			<ul>
-				<li><a class="scroll" href="#">HOME</a></li>
-						<li><a href="#">ABOUT</a></li>
+				        <li><a href="#">HOME</a></li>
+						<li><a href="about.html">ABOUT</a></li>
 						<li><a href="#">BLOGS</a></li>
 						<li><a href="#">BLOG</a></li>
 						<li><a href="#">GUIDES</a></li>
@@ -1351,7 +1352,7 @@
 		<!-- Default-JavaScript -->   <script type="text/javascript" src="./js/jquery-2.1.4.min.js"></script>
 		<!-- Bootstrap-JavaScript --> <script type="text/javascript" src="./js/bootstrap.min.js"></script>
 		<!-- Pushbar CSS --> <script type="text/javascript" src="./js/pushbar.js"></script>
-
+       
 		<!-- Resopnsive-Slider-JavaScript -->
 			<script src="./js/responsiveslides.min.js"></script>
 			<script>
@@ -1426,6 +1427,27 @@
 		<!-- //Smooth-Scrolling-JavaScript -->
 
 	<!-- //Custom-JavaScript-File-Links -->
+
+	<script>
+		// Add an event listener to the window that listens for the "scroll" event
+window.addEventListener("scroll", (event) => {
+  // Get the current vertical scroll position using window.scrollY
+  const scroll = window.scrollY;
+
+  // Select the header element using its "header" tag name
+  const header = document.querySelector(".w3lsnavigation");
+
+  // Check if the scroll position is greater than 20 pixels
+  if (scroll > 20) {
+    // If the condition is true, add the "backDrop & animate__fadeInDownBig" class to the header element
+    header.classList.add("backDrop", "animate__fadeInDownBig");
+  } else {
+    // If the condition is false, remove the "backDrop & animate__fadeInDownBig" class from the header element
+    header.classList.remove("backDrop", "animate__fadeInDownBig");
+  }
+});
+
+	</script>
 
 
 
